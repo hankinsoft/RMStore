@@ -6,7 +6,14 @@
 //  Copyright © 2018 Robot Media. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#if TARGET_OS_IPHONE
+@import UIKit;
+#endif
+#if !TARGET_OS_IPHONE && TARGET_OS_MAC
+@import AppKit;
+#endif
 
 //! Project version number for RMStoreFramework.
 FOUNDATION_EXPORT double RMStoreFrameworkVersionNumber;
