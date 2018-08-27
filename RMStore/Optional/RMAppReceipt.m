@@ -280,21 +280,29 @@ static NSURL *_appleRootCertificateURL = nil;
     return NO;
 }
 
--(BOOL)containsActiveAutoRenewableSubscriptionOfProductIdentifier:(NSString *)productIdentifier forDate:(NSDate *)date
+-(BOOL)containsActiveAutoRenewableSubscriptionOfProductIdentifier: (NSString *)productIdentifier
+                                                          forDate: (NSDate *)date
+                                                   expirationDate: (NSDate**) expirationDate
 {
     RMAppReceiptIAP *lastTransaction = nil;
-    
+
     for (RMAppReceiptIAP *iap in self.inAppPurchases)
     {
         if (![iap.productIdentifier isEqualToString:productIdentifier]) continue;
-        
+
         if (!lastTransaction || [iap.subscriptionExpirationDate compare:lastTransaction.subscriptionExpirationDate] == NSOrderedDescending)
         {
             lastTransaction = iap;
         }
     }
-    
-    return [lastTransaction isActiveAutoRenewableSubscriptionForDate:date];
+
+    BOOL containsActive = [lastTransaction isActiveAutoRenewableSubscriptionForDate:date];
+    if(containsActive && nil != expirationDate)
+    {
+        *expirationDate = [lastTransaction subscriptionExpirationDate];
+    }
+
+    return containsActive;
 }
 
 - (BOOL)verifyReceiptHash
