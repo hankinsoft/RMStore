@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "72D3CAE021345E7A00A7ACCD"
-               BuildableName = "RMStore.framework"
+               BuildableName = "RMStoreFramework.framework"
                BlueprintName = "RMStoreFramework-iOS"
                ReferencedContainer = "container:RMStore.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "72D3CAE021345E7A00A7ACCD"
-            BuildableName = "RMStore.framework"
+            BuildableName = "RMStoreFramework.framework"
             BlueprintName = "RMStoreFramework-iOS"
             ReferencedContainer = "container:RMStore.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "72D3CAE021345E7A00A7ACCD"
-            BuildableName = "RMStore.framework"
+            BuildableName = "RMStoreFramework.framework"
             BlueprintName = "RMStoreFramework-iOS"
             ReferencedContainer = "container:RMStore.xcodeproj">
          </BuildableReference>
