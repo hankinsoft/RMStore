@@ -365,7 +365,12 @@ static NSURL *_appleRootCertificateURL = nil;
     NSData *certificateData = nil;
 #if TARGET_OS_IPHONE
     NSURL *certificateURL = _appleRootCertificateURL ? : [[NSBundle mainBundle] URLForResource:@"AppleIncRootCertificate" withExtension:@"cer"];
-    certificateData = [NSData dataWithContentsOfURL:certificateURL];
+    if(nil == certificateURL)
+    {
+        certificateURL = [[NSBundle bundleForClass: [RMAppReceipt class]]  URLForResource:@"AppleIncRootCertificate" withExtension:@"cer"];
+    }
+
+    certificateData = [NSData dataWithContentsOfURL: certificateURL];
 #elif TARGET_OS_MAC
     if (_appleRootCertificateURL)
     {
