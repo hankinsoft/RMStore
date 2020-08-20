@@ -25,6 +25,10 @@
 		52FE63CA1D3535A00050814B /* RMStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A0AF3D1217A802F300D2E836 /* RMStore.m */; };
 		72167EF52143478400A885CD /* AppleIncRootCertificate.cer in Resources */ = {isa = PBXBuildFile; fileRef = 87BA4B9E1886E362004FD693 /* AppleIncRootCertificate.cer */; };
 		72167EF62143478900A885CD /* AppleIncRootCertificate.cer in Resources */ = {isa = PBXBuildFile; fileRef = 87BA4B9E1886E362004FD693 /* AppleIncRootCertificate.cer */; };
+		72343A9F24EEDCD9007BD471 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72343A9D24EEDCD8007BD471 /* libssl.a */; };
+		72343AA024EEDCD9007BD471 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72343A9E24EEDCD9007BD471 /* libcrypto.a */; };
+		72343AA324EEDCEE007BD471 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72343AA124EEDCEE007BD471 /* libcrypto.a */; };
+		72343AA424EEDCEE007BD471 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72343AA224EEDCEE007BD471 /* libssl.a */; };
 		72D3CAE521345E7A00A7ACCD /* RMStoreFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 72D3CAE321345E7A00A7ACCD /* RMStoreFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		72D3CAE921345E8200A7ACCD /* RMStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A0AF3D1217A802F300D2E836 /* RMStore.m */; };
 		72D3CAEA21345E8300A7ACCD /* RMStoreUserDefaultsPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A2A3A8180E82BB00376773 /* RMStoreUserDefaultsPersistence.m */; };
@@ -32,8 +36,6 @@
 		72D3CAEC21345E8900A7ACCD /* RMStoreKeychainPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 876046481812FB7500C9B78C /* RMStoreKeychainPersistence.m */; };
 		72D3CAED21345E8C00A7ACCD /* RMStoreAppReceiptVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 8793E803180D512E005D7A66 /* RMStoreAppReceiptVerifier.m */; };
 		72D3CAEE21345E8D00A7ACCD /* RMAppReceipt.m in Sources */ = {isa = PBXBuildFile; fileRef = 8793E801180D512E005D7A66 /* RMAppReceipt.m */; };
-		72D3CAEF21345EE700A7ACCD /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8793E797180C2ABE005D7A66 /* libcrypto.a */; };
-		72D3CAF021345EE700A7ACCD /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8793E798180C2ABE005D7A66 /* libssl.a */; };
 		72D3CAF121345EED00A7ACCD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0AF3D3317A8059900D2E836 /* StoreKit.framework */; };
 		72D3CAFD2134607600A7ACCD /* RMStoreKeychainPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 876046481812FB7500C9B78C /* RMStoreKeychainPersistence.m */; };
 		72D3CAFE2134607600A7ACCD /* RMStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A0AF3D1217A802F300D2E836 /* RMStore.m */; };
@@ -42,8 +44,6 @@
 		72D3CB012134607600A7ACCD /* RMStoreUserDefaultsPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A2A3A8180E82BB00376773 /* RMStoreUserDefaultsPersistence.m */; };
 		72D3CB022134607600A7ACCD /* RMStoreTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 876631F8180EEBF40049B368 /* RMStoreTransaction.m */; };
 		72D3CB042134607600A7ACCD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0AF3D3317A8059900D2E836 /* StoreKit.framework */; };
-		72D3CB052134607600A7ACCD /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8793E797180C2ABE005D7A66 /* libcrypto.a */; };
-		72D3CB062134607600A7ACCD /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8793E798180C2ABE005D7A66 /* libssl.a */; };
 		72D3CB082134607600A7ACCD /* RMStoreFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 72D3CAE321345E7A00A7ACCD /* RMStoreFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		72D3CB172134644C00A7ACCD /* RMStore.h in Headers */ = {isa = PBXBuildFile; fileRef = A0AF3D1017A802F300D2E836 /* RMStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		72D3CB182134644F00A7ACCD /* RMStoreUserDefaultsPersistence.h in Headers */ = {isa = PBXBuildFile; fileRef = 87A2A3A7180E82BB00376773 /* RMStoreUserDefaultsPersistence.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -143,6 +143,10 @@
 		52FE63B01D3531B00050814B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52FE63B81D3534390050814B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
 		52FE63BA1D3534450050814B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		72343A9D24EEDCD8007BD471 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = RMStore/Optional/openssl/iOS/libs/libssl.a; sourceTree = "<group>"; };
+		72343A9E24EEDCD9007BD471 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = RMStore/Optional/openssl/iOS/libs/libcrypto.a; sourceTree = "<group>"; };
+		72343AA124EEDCEE007BD471 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = RMStore/Optional/openssl/macOS/lib/libcrypto.a; sourceTree = "<group>"; };
+		72343AA224EEDCEE007BD471 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = RMStore/Optional/openssl/macOS/lib/libssl.a; sourceTree = "<group>"; };
 		72D3CAE121345E7A00A7ACCD /* RMStoreFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RMStoreFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72D3CAE321345E7A00A7ACCD /* RMStoreFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMStoreFramework.h; sourceTree = "<group>"; };
 		72D3CAE421345E7A00A7ACCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -225,8 +229,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				72D3CAF121345EED00A7ACCD /* StoreKit.framework in Frameworks */,
-				72D3CAEF21345EE700A7ACCD /* libcrypto.a in Frameworks */,
-				72D3CAF021345EE700A7ACCD /* libssl.a in Frameworks */,
+				72343A9F24EEDCD9007BD471 /* libssl.a in Frameworks */,
+				72343AA024EEDCD9007BD471 /* libcrypto.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,8 +239,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				72D3CB042134607600A7ACCD /* StoreKit.framework in Frameworks */,
-				72D3CB052134607600A7ACCD /* libcrypto.a in Frameworks */,
-				72D3CB062134607600A7ACCD /* libssl.a in Frameworks */,
+				72343AA324EEDCEE007BD471 /* libcrypto.a in Frameworks */,
+				72343AA424EEDCEE007BD471 /* libssl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +404,10 @@
 		A0AF3D0A17A802F300D2E836 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				72343A9E24EEDCD9007BD471 /* libcrypto.a */,
+				72343A9D24EEDCD8007BD471 /* libssl.a */,
+				72343AA124EEDCEE007BD471 /* libcrypto.a */,
+				72343AA224EEDCEE007BD471 /* libssl.a */,
 				52E207641D5CE26100E89C8F /* IOKit.framework */,
 				52FE63BA1D3534450050814B /* Security.framework */,
 				52FE63B81D3534390050814B /* StoreKit.framework */,
@@ -869,7 +877,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"RMStore/Optional/openssl-1.0.1e/include",
+					RMStore/Optional/openssl/macOS/include,
 				);
 				INFOPLIST_FILE = RMStoreDemo_OSX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -878,7 +886,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/RMStore/Optional/openssl-1.0.1e/lib",
+					"$(PROJECT_DIR)/RMStore/Optional/openssl/macOS/lib",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -913,7 +921,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"RMStore/Optional/openssl-1.0.1e/include",
+					RMStore/Optional/openssl/macOS/include,
 				);
 				INFOPLIST_FILE = RMStoreDemo_OSX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -922,7 +930,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/RMStore/Optional/openssl-1.0.1e/lib",
+					"$(PROJECT_DIR)/RMStore/Optional/openssl/macOS/lib",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -977,7 +985,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SDKROOT)",
-					"RMStore/Optional/openssl-1.0.1e/include",
+					RMStore/Optional/openssl/iOS/include,
 				);
 				INFOPLIST_FILE = RMStoreFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -989,7 +997,8 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/RMStore/Optional/openssl-1.0.1e/lib",
+					"$(PROJECT_DIR)/RMStore/Optional/openssl/iOS/lib",
+					"$(PROJECT_DIR)/RMStore/Optional/openssl/iOS/libs",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -1051,7 +1060,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SDKROOT)",
-					"RMStore/Optional/openssl-1.0.1e/include",
+					RMStore/Optional/openssl/iOS/include,
 				);
 				INFOPLIST_FILE = RMStoreFramework/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1063,7 +1072,8 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/RMStore/Optional/openssl-1.0.1e/lib",
+					"$(PROJECT_DIR)/RMStore/Optional/openssl/iOS/lib",
+					"$(PROJECT_DIR)/RMStore/Optional/openssl/iOS/libs",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -1124,7 +1134,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				HEADER_SEARCH_PATHS = (
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"RMStore/Optional/openssl-1.0.1e/include",
+					RMStore/Optional/openssl/macOS/include,
 				);
 				INFOPLIST_FILE = "RMStoreFramework-iOS copy-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1136,7 +1146,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/RMStore/Optional/openssl-1.0.1e/lib",
+					"$(PROJECT_DIR)/RMStore/Optional/openssl/macOS/lib",
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1198,7 +1208,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				HEADER_SEARCH_PATHS = (
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"RMStore/Optional/openssl-1.0.1e/include",
+					RMStore/Optional/openssl/macOS/include,
 				);
 				INFOPLIST_FILE = "RMStoreFramework-iOS copy-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1210,7 +1220,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/RMStore/Optional/openssl-1.0.1e/lib",
+					"$(PROJECT_DIR)/RMStore/Optional/openssl/macOS/lib",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
@@ -1340,11 +1350,11 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"${TARGET_NAME}/Optional/openssl-1.0.1e/include/**",
+					"${TARGET_NAME}/Optional/openssl/macOS/include/**",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"RMStore/Optional/openssl-1.0.1e/lib",
+					RMStore/Optional/openssl/macOS/lib,
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1361,11 +1371,11 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"${TARGET_NAME}/Optional/openssl-1.0.1e/include/**",
+					"${TARGET_NAME}/Optional/openssl/macOS/include/**",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"RMStore/Optional/openssl-1.0.1e/lib",
+					RMStore/Optional/openssl/macOS/lib,
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
