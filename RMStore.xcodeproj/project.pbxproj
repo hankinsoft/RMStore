@@ -893,7 +893,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "net.robotmedia.RMStoreDemo-OSX";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Debug;
 		};
@@ -937,7 +936,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "net.robotmedia.RMStoreDemo-OSX";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Release;
 		};
