@@ -17,11 +17,13 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "RMStore",
-            path: "Sources"
+            path: "Sources",
+            publicHeadersPath: "Sources"
         ),
         .testTarget(
             name: "RMStoreTests",
-            dependencies: ["RMStore"]
+            dependencies: ["RMStore"],
+            path: "Tests"
         )
     ]
 )
