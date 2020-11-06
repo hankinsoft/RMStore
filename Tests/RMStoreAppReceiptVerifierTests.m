@@ -63,7 +63,12 @@
 
 - (void)testBundleVersion_default
 { SKIP_IF_VERSION(NSFoundationVersionNumber_iOS_6_1)
+
+#if TARGET_OS_IPHONE
+    NSString *expected = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
+#else
     NSString *expected = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+#endif
     NSString *result = _verifier.bundleVersion;
     XCTAssertEqualObjects(expected, result, @"");
 }

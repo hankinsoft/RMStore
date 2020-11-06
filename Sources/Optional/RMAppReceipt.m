@@ -274,7 +274,7 @@ static NSURL *_appleRootCertificateURL = nil;
 /*
  Based on https://github.com/rmaddy/VerifyStoreReceiptiOS
  */
-+ (void)enumerateASN1Attributes:(const uint8_t*)p length:(long)tlength usingBlock:(void (^)(NSData *data, int type))block
++ (void)enumerateASN1Attributes:(const uint8_t*)p length:(long)tlength usingBlock:(void (NS_NOESCAPE ^)(NSData *data, int type))block
 {
     int type, tag;
     long length;
