@@ -7,13 +7,13 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>RMStoreFramework</string>
+	<string>RMStore</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.hankinsoft.RMStoreFramework</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>RMStoreFramework</string>
+	<string>RMStore</string>
 	<key>CFBundlePackageType</key>
 	<string>FMWK</string>
 	<key>CFBundleShortVersionString</key>

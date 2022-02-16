@@ -147,10 +147,10 @@
 		72343A9E24EEDCD9007BD471 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = RMStore/Optional/openssl/iOS/libs/libcrypto.a; sourceTree = "<group>"; };
 		72343AA124EEDCEE007BD471 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = RMStore/Optional/openssl/macOS/lib/libcrypto.a; sourceTree = "<group>"; };
 		72343AA224EEDCEE007BD471 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = RMStore/Optional/openssl/macOS/lib/libssl.a; sourceTree = "<group>"; };
-		72D3CAE121345E7A00A7ACCD /* RMStoreFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RMStoreFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72D3CAE121345E7A00A7ACCD /* RMStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RMStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72D3CAE321345E7A00A7ACCD /* RMStoreFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMStoreFramework.h; sourceTree = "<group>"; };
 		72D3CAE421345E7A00A7ACCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		72D3CB0D2134607600A7ACCD /* RMStoreFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RMStoreFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72D3CB0D2134607600A7ACCD /* RMStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RMStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72D3CB0E2134607600A7ACCD /* RMStoreFramework-iOS copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "RMStoreFramework-iOS copy-Info.plist"; path = "/Users/kylehankinson/Documents/RMStore/RMStoreFramework-iOS copy-Info.plist"; sourceTree = "<absolute>"; };
 		8700D1C017DCA548005C8F5D /* NSNotification+RMStoreTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNotification+RMStoreTests.m"; sourceTree = "<group>"; };
 		8700D1CF17DCB011005C8F5D /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
@@ -395,8 +395,8 @@
 				A0AF3D1917A802F300D2E836 /* RMStoreTests.xctest */,
 				A0AF3D7217A8085900D2E836 /* RMStoreDemo.app */,
 				52FE63A01D3531B00050814B /* RMStoreDemo_OSX.app */,
-				72D3CAE121345E7A00A7ACCD /* RMStoreFramework.framework */,
-				72D3CB0D2134607600A7ACCD /* RMStoreFramework.framework */,
+				72D3CAE121345E7A00A7ACCD /* RMStore.framework */,
+				72D3CB0D2134607600A7ACCD /* RMStore.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -564,7 +564,7 @@
 			);
 			name = "RMStoreFramework-iOS";
 			productName = RMStoreFramework;
-			productReference = 72D3CAE121345E7A00A7ACCD /* RMStoreFramework.framework */;
+			productReference = 72D3CAE121345E7A00A7ACCD /* RMStore.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		72D3CAFB2134607600A7ACCD /* RMStoreFramework-macOS */ = {
@@ -582,7 +582,7 @@
 			);
 			name = "RMStoreFramework-macOS";
 			productName = RMStoreFramework;
-			productReference = 72D3CB0D2134607600A7ACCD /* RMStoreFramework.framework */;
+			productReference = 72D3CB0D2134607600A7ACCD /* RMStore.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		A0AF3D0717A802F300D2E836 /* RMStore */ = {
@@ -1006,7 +1006,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hankinsoft.RMStoreFramework;
-				PRODUCT_NAME = RMStoreFramework;
+				PRODUCT_NAME = RMStore;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
@@ -1086,7 +1086,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hankinsoft.RMStoreFramework;
-				PRODUCT_NAME = RMStoreFramework;
+				PRODUCT_NAME = RMStore;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
@@ -1159,7 +1159,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hankinsoft.RMStoreFramework;
-				PRODUCT_NAME = RMStoreFramework;
+				PRODUCT_NAME = RMStore;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;
@@ -1233,7 +1233,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hankinsoft.RMStoreFramework;
-				PRODUCT_NAME = RMStoreFramework;
+				PRODUCT_NAME = RMStore;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = macosx;

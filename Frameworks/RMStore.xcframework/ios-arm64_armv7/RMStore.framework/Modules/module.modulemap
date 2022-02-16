@@ -1,5 +1,5 @@
-framework module RMStoreFramework {
-  umbrella header "RMStoreFramework.h"
+framework module RMStore {
+  umbrella header "RMStore.h"
 
   export *
   module * { export * }
