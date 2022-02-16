@@ -8,7 +8,7 @@
 			<key>LibraryIdentifier</key>
 			<string>macos-arm64_x86_64</string>
 			<key>LibraryPath</key>
-			<string>RMStore.framework</string>
+			<string>RMStoreFramework.framework</string>
 			<key>SupportedArchitectures</key>
 			<array>
 				<string>arm64</string>
@@ -21,7 +21,7 @@
 			<key>LibraryIdentifier</key>
 			<string>ios-arm64_armv7</string>
 			<key>LibraryPath</key>
-			<string>RMStore.framework</string>
+			<string>RMStoreFramework.framework</string>
 			<key>SupportedArchitectures</key>
 			<array>
 				<string>arm64</string>
@@ -34,7 +34,7 @@
 			<key>LibraryIdentifier</key>
 			<string>ios-arm64_x86_64-maccatalyst</string>
 			<key>LibraryPath</key>
-			<string>RMStore.framework</string>
+			<string>RMStoreFramework.framework</string>
 			<key>SupportedArchitectures</key>
 			<array>
 				<string>arm64</string>
@@ -49,7 +49,7 @@
 			<key>LibraryIdentifier</key>
 			<string>ios-arm64_i386_x86_64-simulator</string>
 			<key>LibraryPath</key>
-			<string>RMStore.framework</string>
+			<string>RMStoreFramework.framework</string>
 			<key>SupportedArchitectures</key>
 			<array>
 				<string>arm64</string>

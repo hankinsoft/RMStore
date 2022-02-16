@@ -1,6 +1,0 @@
-framework module RMStore {
-  umbrella header "RMStore.h"
-
-  export *
-  module * { export * }
-}
