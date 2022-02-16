@@ -9,7 +9,7 @@
 	<key>CFBundleExecutable</key>
 	<string>RMStore</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.hankinsoft.RMStoreFramework</string>
+	<string>com.hankinsoft.rmstore</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
