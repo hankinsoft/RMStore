@@ -3,20 +3,20 @@
 import PackageDescription
  
 let package = Package(
-    name: "RMStore",
+    name: "RMStoreFramework",
     platforms: [
         .iOS(.v12),
         .macOS(.v10_10)
     ],
     products: [
         .library(
-            name: "RMStore",
-            targets: ["RMStore"]),
+            name: "RMStoreFramework",
+            targets: ["RMStoreFramework"]),
     ],
     targets: [
         .binaryTarget(
-            name: "RMStore",
-            path: "Frameworks/RMStore.xcframework"
+            name: "RMStoreFramework",
+            path: "Frameworks/RMStoreFramework.xcframework"
         )
     ]
 )
