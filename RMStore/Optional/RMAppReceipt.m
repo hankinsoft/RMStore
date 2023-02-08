@@ -335,10 +335,18 @@ static NSURL *_appleRootCertificateURL = nil;
     NSURL *URL = [NSBundle mainBundle].appStoreReceiptURL;
     NSString *path = URL.path;
     const BOOL exists = [[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:nil];
-    if (!exists) return nil;
+    if (!exists)
+    {
+        RMAppReceiptLog(@"RMAppReceipt - no bundleReceipt. file does not exist.");
+        return nil;
+    }
     
     NSData *data = [RMAppReceipt dataFromPCKS7Path:path];
-    if (!data) return nil;
+    if (!data)
+    {
+        RMAppReceiptLog(@"RMAppReceipt - no bundleReceipt. dataFromPCKS7Path returned nil.");
+        return nil;
+    }
     
     RMAppReceipt *receipt = [[RMAppReceipt alloc] initWithASN1Data:data];
     return receipt;
