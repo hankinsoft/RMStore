@@ -47,6 +47,10 @@
  */
 @property (nonatomic, strong, readonly) NSData *receiptHash;
 
+/** Date the receipt was created.
+ */
+@property (nonatomic, strong, readonly) NSDate * receiptCreationDate;
+
 /** Array of in-app purchases contained in the receipt.
  @see RMAppReceiptIAP
  */
