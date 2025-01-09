@@ -42,6 +42,7 @@ NSInteger const RMAppReceiptASN1TypeBundleIdentifier = 2;
 NSInteger const RMAppReceiptASN1TypeAppVersion = 3;
 NSInteger const RMAppReceiptASN1TypeOpaqueValue = 4;
 NSInteger const RMAppReceiptASN1TypeHash = 5;
+NSInteger const RMAppReceiptASN1TypeReceiptCreationDate = 12;
 NSInteger const RMAppReceiptASN1TypeInAppPurchaseReceipt = 17;
 NSInteger const RMAppReceiptASN1TypeOriginalAppVersion = 19;
 NSInteger const RMAppReceiptASN1TypeExpirationDate = 21;
@@ -249,6 +250,12 @@ static NSURL *_appleRootCertificateURL = nil;
                 case RMAppReceiptASN1TypeHash:
                     _receiptHash = data;
                     break;
+                case RMAppReceiptASN1TypeReceiptCreationDate:
+                {
+                    NSString *string = RMASN1ReadIA5SString(&s, length);
+                    _receiptCreationDate = [RMAppReceipt formatRFC3339String:string];
+                    break;
+                }
                 case RMAppReceiptASN1TypeInAppPurchaseReceipt:
                 {
                     RMAppReceiptIAP *purchase = [[RMAppReceiptIAP alloc] initWithASN1Data:data];
@@ -324,7 +331,7 @@ static NSURL *_appleRootCertificateURL = nil;
     [data appendData:self.opaqueValue];
     [data appendData:self.bundleIdentifierData];
     
-    NSMutableData *expectedHash = [NSMutableData dataWithLength:SHA_DIGEST_LENGTH];
+    NSMutableData *expectedHash = [NSMutableData dataWithLength: SHA_DIGEST_LENGTH];
     SHA1((const uint8_t*)data.bytes, data.length, (uint8_t*)expectedHash.mutableBytes); // Explicit casting to avoid errors when compiling as Objective-C++
     
     return [expectedHash isEqualToData:self.receiptHash];
